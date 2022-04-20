@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>(가제) 공주와 돼지1</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@500;600;700;900&display=swap" rel="stylesheet">
+	<style type="text/css">
+		*{box-sizing: border-box ;}
+		html{font-size: 16px; font-family: 'Noto Sans KR', sans-serif; word-break: keep-all; position: relative;}
+		body,h1,h2,h3,h4,p,ul,li{margin: 0; padding: 0;}
+		h1{font-size: 6rem; line-height: 9rem; font-family: 900;}
+		h2{font-size: 4.55rem; font-weight: 500;}
+		h3{font-size: 2.5rem;font-weight: 500;}
+		h4{font-size: 2rem; font-weight: 500;}
+		p{font-size: 1.6rem; line-height: 3rem;}
+		b{font-weight: 700;}
+		b.sans,b.serif{font-weight: 400;}
+		.a1{display: inline-block;
+			font-size: 2rem;
+			font-weight: 300;
+			margin: 10px;
+			width: 200px; height: 200px;
+			text-align: center;
+			line-height: 195px;
+			border-radius: 50%;
+			border: 1px solid black;}
+		.a2{display: inline-block;
+			font-size: 1.5rem;
+			font-weight: 500;
+			margin: 10px;
+			width: 250px; height: 100px;
+			text-align: center;
+			line-height: 95px;
+			border-radius: 50px;
+			border: 1px solid white;}
+		a.a1:hover{background: black; color: white; font-family: 'Noto Serif KR', serif; box-shadow: 0px 0px 20px black;
+			transition: all 0.3s; border: none;}
+		a.a2:hover{background: white; color: black;  box-shadow: 0px 0px 20px white;
+			transition: all 0.3s; border: none;}
+		section{padding: 100px;}
+		header,.row{width: 1020px;
+				margin: auto;
+				display: flex;
+				padding: 50px;
+				/*background: yellow;*/
+				margin-bottom: 10px;}
+		header{font-family: 'Noto Serif KR', serif; padding-top: 200px;  overflow: hidden;}
+		/*header{background: url('ear.png');}*/
+		.col-1{width: 100%; margin: 0px 10px;}
+		.col-2{width: 50%; margin: 0px 10px;}
+		.col-3{width: 33.3%; margin: 0px 10px;}
+		.blur{filter: blur(10px); /*-webkit-filter: blur(10px);*/}
+		.blur2{filter: blur(5px);}
+		.blur3{filter: blur(2px);}
+		.serif{font-family: 'Noto Serif KR', serif;}
+		.regular{font-weight: 400;}
+		.medium{font-weight: 600;}
+		.bold{font-weight: 700;}
+		.black{background: #0d0d0d}
+		.text-white{color: white;}
+		.textalign-right{text-align: right;}
+		.textalign-center{text-align: center;}
+		.gradient{background: linear-gradient(0deg, rgba(13,13,13,1) 80%, rgba(255,255,255,1) 100%);}
+		.whisper{width: 680px; position: absolute; right: -800px; top: 0px; background-attachment: fixed;
+			animation: whisper 5s forwards;}
+		.ear{width: 320px; position: absolute; left: -80px; top: -50px;background-attachment: fixed;}
+		.phone{animation: phone 0.2s infinite alternate;}
+		div.deg{padding: 0; color: white; display:inline-block; transform: rotate(-15deg); font-family: 300; animation: deg 0.5s alternate infinite;}
+		.box{background-color: black; height: 120px; width: 210px; position:absolute; top:315px;}
+		.errb {display: inline-block;
+    			position:relative;
+    			background: url('black.svg') bottom repeat-x;}
+    	.errw {display: inline-block;
+    			position:relative;
+    			background: url('white.svg') bottom repeat-x; }
+}
+		@keyframes deg{
+			from{ transform: rotate(-15deg); }
+			to{ transform:rotate(0deg); }};
+		@keyframes phone{
+			from{left: -2px;}
+			to{left: 2px;}}
+		@keyframes whisper{
+			from{ right: -150px; top: -70px; opacity: 0;}
+			to{ right: 0px; top: -50px; opacity: 1}}
+
+
+	</style>
+</head>
+<body>
+<section style="padding-bottom: 0;">
+	<header class="row bold" >
+		<img src="whisper.png" class="whisper">
+		<img src="ear.png" class="ear">
+		<h1 style="z-index: 1;">저기 혹시, <br><div style="position: relative; left: 10px; display: inline-block;"><div class="deg"> 뒷</div><div class="deg"> 담</div></div><br>좋아하니?</h1>
+		<div class="row box"></div>
+	</header>
+	<div style="height: 200px;"></div>
+		<div class="row">
+		<div class="col-2 fontsize36">
+			<p>아차차! 초면에 이런 질문은 실례려나?<br>아무렴 어때, <b>좋아하냐구.</b></p>
+		</div>
+	</div>
+	<div class="row" style="padding-bottom: 0;">
+		<h4><br><br>그래 맞아. 뒷담화는... </h4>
+	</div>
+	<div class="row">
+		<div class="col-1 textalign-center">
+		<a class="a1">반인륜적인</a>
+		<a class="a1">무책임한</a>
+		<a class="a1">비겁한</a>
+		<a class="a1">겁쟁이나 하는</a>
+	</div>
+	</div>
+
+	<div class="row textalign-right"style="padding-top: 0;">
+		<div class="col-2"></div>
+		<div class="col-2">
+		<h4>────────  짓이잖아!</h4>
+		</div>
+	</div>
+	<div class="row textalign-center"  style="padding-bottom: 0; position: relative; top:50px">
+		<div class="col-1">
+			<p>그런데 우리가 이 대답에<br>어디까지<b class="serif"> 장담</b>할 수 있을까?<br><br><br></p>
+		<p><br>지금부터 내가 한 이야기를 들려줄게.<br><br><br><br><b class="serif errb">대한제국 총리인 너</b>는, 아주 오랜만에,<br>깊은 잠에 빠져있었어.</p></div>
+	</div>
+</section>
+<section class="gradient text-white">
+	
+	<div style=" position: absolute; right: 10vw; ">
+	<div class="serif blur"> <h1><i>지이이이잉──</i></h1></div>
+	<div class="serif blur2" style= "position: relative; right: 50px; top: 50px"> <h1><i>지이이이잉──</i></h1></div>
+	<div class="serif blur3" style= "position: relative; right: 100px; top: 100px"> <h1><i>지이이이잉──</i></h1></div>
+	<div class="serif" style= "position: relative; right: 150px; top: 150px"> <h1><i>지이이이잉──</i></h1></div>
+</div>
+<div style="height: 700px"></div>
+	<div class="col-1 textalign-center">
+		<img src="phone.png"style="width: 50vw; position:relative;"  class="phone" ></div>
+	<div class="row">
+		<h2>익명의 전화</h2>
+	</div>
+	<div class="row">
+		<div class="col-2">
+			<p><b>AM 4:00 침대 위</b></p>
+			<p>귀를 찌르는 날카로운 벨소리가 너의 무거운 눈꺼풀을 뜨게 만들었어.</p>
+		</div>
+		<div class="col-2"></div>
+	</div>
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-2">
+			<p>어라, 새벽 4시? 대체 누가 예의없게 이 시간에 전화를 걸었대? 그것도 감히, 최고 권위자인 너한테! <br> 그런데 <b class=" serif errw">발신자 정보 제한</b>으로 걸려왔네. 어딘가 미심쩍은데 ...</p>
+		</div>
+	</div>
+	<div class="row" style=" padding-bottom: 10px; ">
+		<div class="col-1 textalign-center" style=" text-shadow: white 0 0 3px;">
+			───────────────────────────────────────<br><br>
+			<h3>Q1.</h3><h3 style="font-weight: 400;">전화를 받을까?</h3>
+		</div>
+	</div>
+	</div>
+	<div class="row" style="padding-top: 20px;">
+		<div class="col-1 textalign-center">
+		<a class="a2" href="https://gallgal.github.io/princess2/">받는다</a>
+		<a class="a2">받지 않는다</a></div>
+	</div>
+</section>
+</body>
+</html>
