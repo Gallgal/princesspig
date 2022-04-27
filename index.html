@@ -6,12 +6,12 @@
 	<title>(가제) 공주와 돼지1</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@500;600;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;700;900&family=Noto+Serif+KR:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
 	<style type="text/css">
 		*{box-sizing: border-box ;}
 		html{font-size: 16px; font-family: 'Noto Sans KR', sans-serif; word-break: keep-all; position: relative;}
 		body,h1,h2,h3,h4,p,ul,li{margin: 0; padding: 0;}
-		h1{font-size: 6rem; line-height: 9rem; font-family: 900;}
+		h1{font-size: 7rem; line-height: 9rem; font-weight: 700;}
 		h2{font-size: 4.55rem; font-weight: 500;}
 		h3{font-size: 2.5rem;font-weight: 500;}
 		h4{font-size: 2rem; font-weight: 500;}
@@ -35,7 +35,10 @@
 			text-align: center;
 			line-height: 95px;
 			border-radius: 50px;
-			border: 1px solid white;}
+			border: 1px solid white;
+			color: white;
+			text-decoration: none;
+			box-shadow: 0 0 4px white;}
 		a.a1:hover{background: black; color: white; font-family: 'Noto Serif KR', serif; box-shadow: 0px 0px 20px black;
 			transition: all 0.3s; border: none;}
 		a.a2:hover{background: white; color: black;  box-shadow: 0px 0px 20px white;
@@ -47,7 +50,7 @@
 				padding: 50px;
 				/*background: yellow;*/
 				margin-bottom: 10px;}
-		header{font-family: 'Noto Serif KR', serif; padding-top: 200px;  overflow: hidden;}
+		header{font-family: 'Noto Serif KR', serif;  padding-top: 200px;  overflow: hidden; height: 100vh;}
 		/*header{background: url('ear.png');}*/
 		.col-1{width: 100%; margin: 0px 10px;}
 		.col-2{width: 50%; margin: 0px 10px;}
@@ -60,16 +63,30 @@
 		.medium{font-weight: 600;}
 		.bold{font-weight: 700;}
 		.black{background: #0d0d0d}
+		.white{background: white;}
 		.text-white{color: white;}
 		.textalign-right{text-align: right;}
 		.textalign-center{text-align: center;}
 		.gradient{background: linear-gradient(0deg, rgba(13,13,13,1) 80%, rgba(255,255,255,1) 100%);}
-		.whisper{width: 680px; position: absolute; right: -800px; top: 0px; background-attachment: fixed;
+		.whisper{width: 800px; position: absolute; right: -800px; top: 0px; background-attachment: fixed;
 			animation: whisper 5s forwards;}
-		.ear{width: 320px; position: absolute; left: -80px; top: -50px;background-attachment: fixed;}
-		.phone{animation: phone 0.2s infinite alternate;}
-		div.deg{padding: 0; color: white; display:inline-block; transform: rotate(-15deg); font-family: 300; animation: deg 0.5s alternate infinite;}
-		.box{background-color: black; height: 120px; width: 210px; position:absolute; top:315px;}
+			@keyframes whisper{
+			from{ right: -150px; top: -70px; opacity: 0; filter: blur(5px);}
+			to{ right: 0px; top: -50px; opacity: 1; filter: blur(0);}}
+		.ear{width: 350px; position: absolute; left: -80px; top: -50px;background-attachment: fixed; animation: ear 5s forwards;}
+			@keyframes ear{
+				from{opacity: 0; filter: blur(5px);}
+				to{opacity: 1; filter: blur(0);}
+			}
+		.phone{animation: phone 0.15s infinite alternate linear;}
+				@keyframes phone{
+			from{left: -5px;}
+			to{left: 5px;}}
+		div.deg{padding: 0; color: white; display:inline-block; transform: rotate(-15deg); font-weight: 300; animation: deg 0.5s alternate infinite;}
+		@keyframes deg{
+			from{transform: rotate(-15deg); }
+			to{transform:rotate(0deg); }}
+		.box{background-color: black; height: 135px; width: 240px; position:absolute; top:305px;}
 		.errb {display: inline-block;
     			position:relative;
     			background: url('black.svg') bottom repeat-x;}
@@ -77,28 +94,21 @@
     			position:relative;
     			background: url('white.svg') bottom repeat-x; }
 }
-		@keyframes deg{
-			from{ transform: rotate(-15deg); }
-			to{ transform:rotate(0deg); }};
-		@keyframes phone{
-			from{left: -2px;}
-			to{left: 2px;}}
-		@keyframes whisper{
-			from{ right: -150px; top: -70px; opacity: 0;}
-			to{ right: 0px; top: -50px; opacity: 1}}
+		
 
 
 	</style>
 </head>
 <body>
-<section style="padding-bottom: 0;">
-	<header class="row bold" >
+<section style="padding-bottom: 0; position: relative; overflow: hidden; width: 100vw">
+	<header class="row">
 		<img src="whisper.png" class="whisper">
 		<img src="ear.png" class="ear">
-		<h1 style="z-index: 1;">저기 혹시, <br><div style="position: relative; left: 10px; display: inline-block;"><div class="deg"> 뒷</div><div class="deg"> 담</div></div><br>좋아하니?</h1>
+		<h1 style="z-index: 1;">저기 혹시, <br><div style="position: relative; left: 10px; display: inline-block;"><div class="deg">뒷</div><div class="deg">담</div></div><br>좋아하니?</h1>
 		<div class="row box"></div>
 	</header>
-	<div style="height: 200px;"></div>
+</section>
+<section class="white">
 		<div class="row">
 		<div class="col-2 fontsize36">
 			<p>아차차! 초면에 이런 질문은 실례려나?<br>아무렴 어때, <b>좋아하냐구.</b></p>
@@ -109,10 +119,10 @@
 	</div>
 	<div class="row">
 		<div class="col-1 textalign-center">
-		<a class="a1">반인륜적인</a>
-		<a class="a1">무책임한</a>
-		<a class="a1">비겁한</a>
-		<a class="a1">겁쟁이나 하는</a>
+		<a class="a1"><div onmouseover="this.innerHTML = '은밀한'" onmouseout="this.innerHTML = '반윤리적인'" >반윤리적인</div></a>
+		<a class="a1"><div onmouseover="this.innerHTML = '흥미로운'" onmouseout="this.innerHTML = '비겁한'" >비겁한</div></a>
+		<a class="a1"><div onmouseover="this.innerHTML = '기회적인'" onmouseout="this.innerHTML = '책임감 없는'" >책임감 없는</div></a>
+		<a class="a1"><div onmouseover="this.innerHTML = '소수만의'" onmouseout="this.innerHTML = '겁쟁이나 하는'" >겁쟁이나 하는</div></a>
 	</div>
 	</div>
 
@@ -130,7 +140,7 @@
 </section>
 <section class="gradient text-white">
 	
-	<div style=" position: absolute; right: 10vw; ">
+	<div style=" position: absolute; right: -5vw; ">
 	<div class="serif blur"> <h1><i>지이이이잉──</i></h1></div>
 	<div class="serif blur2" style= "position: relative; right: 50px; top: 50px"> <h1><i>지이이이잉──</i></h1></div>
 	<div class="serif blur3" style= "position: relative; right: 100px; top: 100px"> <h1><i>지이이이잉──</i></h1></div>
@@ -145,14 +155,14 @@
 	<div class="row">
 		<div class="col-2">
 			<p><b>AM 4:00 침대 위</b></p>
-			<p>귀를 찌르는 날카로운 벨소리가 너의 무거운 눈꺼풀을 뜨게 만들었어.</p>
+			<p>귀를 찌르는 날카로운 벨소리가<br>너의 무거운 눈꺼풀을 뜨게 만들었어.</p>
 		</div>
 		<div class="col-2"></div>
 	</div>
 	<div class="row">
 		<div class="col-2"></div>
 		<div class="col-2">
-			<p>어라, 새벽 4시? 대체 누가 예의없게 이 시간에 전화를 걸었대? 그것도 감히, 최고 권위자인 너한테! <br> 그런데 <b class=" serif errw">발신자 정보 제한</b>으로 걸려왔네. 어딘가 미심쩍은데 ...</p>
+			<p>어라, 새벽 4시? 대체 누가 예의없게<br>이 시간에 전화를 걸었대? 그것도 감히,<br>대한제국 최고 권위자인 너한테! <br> 그런데 <b class=" serif errw">발신자 정보 제한</b>으로 걸려왔네. 어딘가 미심쩍은데 ...</p>
 		</div>
 	</div>
 	<div class="row" style=" padding-bottom: 10px; ">
